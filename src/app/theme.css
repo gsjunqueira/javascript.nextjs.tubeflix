@@ -1,0 +1,23 @@
+:root {
+    --background: #141414;
+    --background-secondary: #181818;
+    --text: #FFFFFF;
+    --text-secondary: #B3B3B3;
+    --primary: #E50914;
+    --primary-hover: #B20710;
+    --button-bg: #E50914;
+    --button-text: #FFFFFF;
+    --border-color: #333333;
+}
+
+[data-theme='light'] {
+    --background: #FFFFFF;
+    --background-secondary: #F5F5F5;
+    --text: #000000;
+    --text-secondary: #333333;
+    --primary: #E50914;
+    --primary-hover: #B20710;
+    --button-bg: #E50914;
+    --button-text: #FFFFFF;
+    --border-color: #CCCCCC;
+}
