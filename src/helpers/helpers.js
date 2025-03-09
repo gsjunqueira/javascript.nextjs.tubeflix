@@ -1,6 +1,10 @@
 export function objectToArray(object) {
-    return Object.entries(object).map(([ key, data ]) => ({
-        key, ...data }))
+    return Object
+        .entries(object)
+        .map(([ key, data ]) => ({
+            key, 
+            ...data 
+        }))
 }
 
 export function getRandomItem(array) {
@@ -12,5 +16,17 @@ export function randomizeArray(array) {
 }
 
 export function removeDuplicates(array) {
-    return array.filter((item, index) => array.indexOf(item) === index)
+    return array.filter((item, index) => 
+        array.indexOf(item) === index
+    )
+}
+
+export async function getVideos(tag) {
+    const response = await fetch('/database.json', {
+        next: { recalidate: 60 }
+    })
+    const videos = await response.json()
+    const videosList = objectToArray(videos)
+        .filter(video => tag == undefined || video.tags.includes(tag))
+    return videosList
 }
