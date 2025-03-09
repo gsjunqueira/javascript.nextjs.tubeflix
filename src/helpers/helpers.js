@@ -12,5 +12,5 @@ export function randomizeArray(array) {
 }
 
 export function removeDuplicates(array) {
-    return array.filter((array, index) => array.indexOf(item) === index)
+    return array.filter((item, index) => array.indexOf(item) === index)
 }
