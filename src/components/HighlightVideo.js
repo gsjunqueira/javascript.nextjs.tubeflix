@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import style from './HighlightVideo.module.css'
-import { getRandomItem, getVideos, objectToArray } from '@/helpers/helpers'
+import { getRandomItem, getVideos } from '@/helpers/helpers'
 import Link from 'next/link'
 
 export default function HighlightVideo({ tag }) {

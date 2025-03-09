@@ -1,6 +1,6 @@
 "use client"
 
-import { useContext, useEffect, useState } from 'react'
+import { useContext } from 'react'
 import style from './ThemeToggle.module.css'
 import { ThemeContext } from '@/contexts/ThemeContext'
 

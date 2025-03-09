@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react'
 import style from './VideoTags.module.css'
-import { getVideos, objectToArray, removeDuplicates } from '@/helpers/helpers'
+import { getVideos, removeDuplicates } from '@/helpers/helpers'
+import VideoList from './VideoList'
 
 export default function VideoTags({ tag }) {
     const [ tags, setTags ] = useState([])
@@ -14,7 +15,7 @@ export default function VideoTags({ tag }) {
                 .map(video => video.tags)
                 .flat()
                 .sort()
-            .filter(tag => tag !== 'Vídeos' && tag !== 'Músicas'))
+                .filter(tag => tag !== 'Vídeos' && tag !== 'Músicas'))
             setTags(tagList)
         }
         fetchVideos()
@@ -24,6 +25,7 @@ export default function VideoTags({ tag }) {
         tags.map(tag => (
             <div key={tag} className={style.tag}>
                 <h3 className={style.title}>{tag}</h3>
+                <VideoList tag={tag} />
             </div>
         ))
     )
