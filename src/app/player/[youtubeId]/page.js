@@ -16,7 +16,7 @@ export default function PlayerPage() {
             document.title = `${video.title} - ${document.title}`
         }
         setTitle()
-    }, [])
+    }, [youtubeId])
 
     return (
         <div className={ style.player }>
